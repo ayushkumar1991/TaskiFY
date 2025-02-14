@@ -104,3 +104,24 @@ body {
   padding-left: 15px !important;
   color: white;
 }
+
+
+.taskify-glow {
+  color: #00ffff;
+  /*Neoncyancolor*/text-shadow:     0 0 5px #00ffff,     0 0 10px #00ffff,     0 0 20px #00ffff,     0 0 40px #00ffcc,     0 0 80px #00ffcc;
+  font-weight: 900;
+  transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  -webkit-transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  -moz-transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  -ms-transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+  -o-transition: text-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.taskify-glow:hover {
+  text-shadow:     0 0 10px #00ffff,     0 0 20px #00ffff,     0 0 40px #00ffff,     0 0 60px #00ffcc,     0 0 100px #00ffcc;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
