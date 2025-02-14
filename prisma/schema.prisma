@@ -51,7 +51,7 @@ model Issue {
   title       String
   description String?
   status      IssueStatus
-  order       Int        // This will store the order within its status column
+  order       Int        // This will store the order within its status column in the end
   priority    IssuePriority
   assignee    User?      @relation("Assignee", fields: [assigneeId], references: [id])
   assigneeId  String?

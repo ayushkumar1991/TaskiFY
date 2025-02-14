@@ -47,7 +47,7 @@ export default function DeleteProject({ projectId }) {
       >
         <Trash2 className="h-4 w-4" />
       </Button>
-      {error && <p className="text-red-500 text-sm">{error.message}</p>}
+      {error && <p className="text-red-600 text-sm">{error.message}</p>}
     </>
   );
 }

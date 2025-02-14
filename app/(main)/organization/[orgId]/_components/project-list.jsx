@@ -32,10 +32,10 @@ export default async function ProjectList({ orgId }) {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-500 mb-4">{project.description}</p>
+            <p className="text-sm text-gray-600 mb-4">{project.description}</p>
             <Link
               href={`/project/${project.id}`}
-              className="text-blue-500 hover:underline"
+              className="text-blue-600 hover:underline"
             >
               View Project
             </Link>

@@ -25,4 +25,4 @@ const useFetch = (cb) => {
   return { data, loading, error, fn, setData };
 };
 
-export default useFetch;
+export default useFetch

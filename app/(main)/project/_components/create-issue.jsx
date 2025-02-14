@@ -94,7 +94,7 @@ export default function IssueCreationDrawer({
         {usersLoading && <BarLoader width={"100%"} color="#36d7b7" />}
         <form onSubmit={handleSubmit(onSubmit)} className="p-4 space-y-4">
           <div>
-            <label htmlFor="title" className="block text-sm font-medium mb-1">
+            <label htmlFor="title" className="block text-sm font-medium mb-2">
               Title
             </label>
             <Input id="title" {...register("title")} />
