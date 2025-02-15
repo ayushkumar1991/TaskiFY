@@ -15,7 +15,7 @@ async function Header() {
     <header className="container mx-auto">
   <nav className="py-6 px-4 flex justify-between items-center">
     <Link href="/">
-      <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text drop-shadow-lg">
+    <h1 className="text-7xl sm:text-6xl font-extrabold bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-transparent bg-clip-text drop-shadow-2xl">
         TaskiFY
       </h1>
     </Link>

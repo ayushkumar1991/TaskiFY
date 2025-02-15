@@ -97,7 +97,7 @@ export default function IssueCreationDrawer({
             <label htmlFor="title" className="block text-sm font-medium mb-2">
               Title
             </label>
-            <Input id="title" {...register("title")} />
+            <Input className="text-black" tid="title" {...register("title")} />
             {errors.title && (
               <p className="text-red-500 text-sm mt-1">
                 {errors.title.message}

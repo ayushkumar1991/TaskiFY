@@ -121,7 +121,7 @@ export default function CreateProjectPage() {
           type="submit"
           size="lg"
           disabled={loading}
-          className="bg-blue-500 text-white"
+          className="bg-blue-700 text-white"
         >
           {loading ? "Creating..." : "Create Project"}
         </Button>

@@ -86,12 +86,12 @@ export default function Home() {
       </span>
     </span>
   </h1>
-        <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto gap-3">
           Empower your team with our intuitive project management solution.
         </p>
         <p className="text-xl mb-12 max-w-2xl mx-auto"></p>
         <Link href="/onboarding">
-          <Button size="lg" className="mr-4">
+          <Button size="lg" className="mr-4 bg-green-900">
             Get Started <ChevronRight size={18} className="ml-1" />
           </Button>
         </Link>

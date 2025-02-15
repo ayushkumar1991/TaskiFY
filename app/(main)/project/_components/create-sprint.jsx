@@ -69,7 +69,7 @@ export default function SprintCreationForm({
           {projectTitle}
         </h1>
         <Button
-          className="mt-2"
+          className="mt-2 bg-green-900"
           onClick={() => setShowForm(!showForm)}
           variant={!showForm ? "default" : "destructive"}
         >
@@ -103,7 +103,7 @@ export default function SprintCreationForm({
                 )}
               </div>
               <div className="flex-1">
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-white">
                   Sprint Duration
                 </label>
                 <Controller
@@ -118,7 +118,7 @@ export default function SprintCreationForm({
                             !dateRange && "text-muted-foreground"
                           }`}
                         >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
+                          <CalendarIcon className="mr-2 h-4 w-4 " />
                           {dateRange.from && dateRange.to ? (
                             format(dateRange.from, "LLL dd, y") +
                             " - " +
