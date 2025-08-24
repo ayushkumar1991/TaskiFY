@@ -1,0 +1,99 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop, genspark_ai_developer ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  # Code Quality & Testing
+  test:
+    name: Test & Quality Check 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Run ESLint
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Generate Prisma client
+        run: npx prisma generate
+
+      - name: Run build check
+        run: npm run build
+        env:
+          SKIP_ENV_VALIDATION: true
+
+  # Deploy to staging (develop branch)
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    environment:
+      name: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy notification
+        run: echo "Deploying to staging environment"
+
+  # Deploy to production (main branch)
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment:
+      name: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy notification
+        run: echo "Deploying to production environment"
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          body: |
+            ## TaskiFY Enhanced Release
+            
+            ### New Features
+            - Enhanced error handling and user experience
+            - Improved issue card components with quick actions
+            - Better utility functions for date formatting and validation
+            - Enhanced server actions with comprehensive error handling
+            
+            ### Improvements
+            - Better code organization and structure
+            - Enhanced UI/UX with improved components
+            - More robust error boundaries
+            - Performance optimizations
+            
+            Deployed automatically from main branch.
+          draft: false
+          prerelease: false

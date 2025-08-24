@@ -15,19 +15,42 @@ TaskiFY is a modern and intuitive project management web application designed to
 
 ## 🚀 Features
 
-- 🏆 **Task Management** - Create, update, and track tasks effortlessly.
-- 📅 **Kanban Board** - Visualize your workflow with drag-and-drop functionality.
-- 🔔 **Notifications** - Stay updated with real-time notifications.
-- 🔥 **Priority System** - Categorize tasks by priority levels (Low, Medium, High, Urgent).
-- 👥 **User Authentication** - Secure login using Clerk authentication.
-- 🎨 **Beautiful UI** - Built with Next.js, Tailwind CSS, and Shadcn UI for the best user experience.
+### Core Features
+- 🏆 **Enhanced Task Management** - Create, update, and track tasks with improved error handling
+- 📅 **Interactive Kanban Board** - Visualize workflow with drag-and-drop and quick status changes
+- 🔔 **Smart Notifications** - Stay updated with real-time notifications and status changes
+- 🔥 **Intelligent Priority System** - AI-assisted priority categorization (Low, Medium, High, Urgent)
+- 👥 **Secure Authentication** - Multi-provider authentication using Clerk
+- 🎨 **Modern UI/UX** - Enhanced components with hover effects and smooth animations
+
+### New Enhanced Features ⭐
+- 🛡️ **Error Boundaries** - Comprehensive error handling with graceful recovery
+- ⚡ **Performance Optimized** - Enhanced utilities and optimized component rendering  
+- 🎯 **Quick Actions** - One-click status changes and inline editing on issue cards
+- 📊 **Better Analytics** - Track user actions and system performance
+- 🔧 **Developer Experience** - Improved code structure with enhanced server actions
+- 🚀 **Production Ready** - Robust error handling and validation throughout
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js, React, Tailwind CSS, Shadcn UI
-- **Backend:** Next.js API Routes
-- **Database:** NeonDB
-- **Authentication:** Clerk
+### Frontend
+- **Framework:** Next.js 14 with App Router
+- **UI Library:** React with enhanced components
+- **Styling:** Tailwind CSS with custom design system
+- **Components:** Shadcn UI with Radix UI primitives
+- **State Management:** React Server Components + Enhanced Server Actions
+
+### Backend & Database
+- **API:** Next.js API Routes with enhanced error handling
+- **Database:** PostgreSQL with Prisma ORM
+- **Authentication:** Clerk with multi-provider support
+- **Storage:** NeonDB (serverless PostgreSQL)
+
+### Enhanced Features
+- **Error Handling:** Comprehensive error boundaries and validation
+- **Performance:** Optimized utilities and caching mechanisms
+- **DevOps:** GitHub Actions CI/CD pipeline
+- **Code Quality:** ESLint, Prettier, and enhanced code structure
 
 ## ⚡ Installation & Setup
 
